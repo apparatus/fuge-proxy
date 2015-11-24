@@ -22,7 +22,6 @@ test('generate test', function(t) {
 
   var system = require('./fixture/system2/system.json');
   generator.generate(system, {proxy: 'all'}, function(system) {
-//    console.log(JSON.stringify(system, null, 2));
     t.equal(4, system.length);
     t.equal('docsrv', system[0].name);
     t.equal(10001, system[0].port);
